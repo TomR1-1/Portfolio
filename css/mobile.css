@@ -1,0 +1,67 @@
+@media (max-width: 600px) {
+    .hero .navbar {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 65px;
+    }
+
+    .hero .navbar .logo {
+        font-size: 1.1rem;
+        line-height: 1.1;
+    }
+
+    .hero .navbar .logo > * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero .navbar .logo p a {
+        margin: 0;
+        padding-bottom: 0;
+    }
+
+    .hero .navbar nav {
+        font-size: 0.7rem;
+    }
+
+    .hero .content h1 {
+        font-size: 25px;
+    }
+
+    .hero .content p {
+        font-size: 15px;
+        max-width: 600px;
+        margin: 20px 0 30px;
+    }
+
+    #aboutMe .bioInfo {
+        grid-template-areas:
+        "bioimage bioimage bioimage"
+        "bio bio bio"
+    }
+
+    #projects .pastProjects {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    #contact .contact {
+        grid-template-areas:
+        "email"
+        "phone";
+    }
+
+    #mainFooter .footerContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #mainFooter .footerContent .social i {
+        margin: 0.8rem;
+        padding: 0.7rem;
+    }
+
+    /* Introduction text size*/
+    .introText {
+        font-size: 1rem;
+    }
+}

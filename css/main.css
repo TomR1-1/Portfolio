@@ -1,0 +1,305 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #137ff2;
+  --secondary-color: #ff6303;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main styling */
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+p {
+    margin: 10px 0;
+}
+
+span {
+    color: var(--primary-color);
+}
+
+img {
+    width: 100%;
+}
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    /*background-color: transparent;*/
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    padding: 0 25px;
+    transition: 0.5s;
+}
+  
+.navbar .logo {
+    font-size: 2rem;
+    font-weight: 400;
+}
+  
+.navbar a {
+color: #fff;
+padding: 10px 10px;
+margin: 0 2.5px;
+}
+
+.navbar ul li a {
+transition: border-color 0.2s ease-in-out;
+border-bottom: 2px transparent solid;
+}
+
+.navbar ul li a:hover {
+border-bottom: 2px var(--secondary-color) solid;
+color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar ul {
+display: flex;
+}
+
+/* Header */
+.hero {
+  background: url("https://therightsofnature.org/wp-content/uploads/2018/01/turkey-3048299_1920-1366x550.jpg")
+    no-repeat center center/cover;
+  height: 75vh;
+  position: relative;
+  color: #fff;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  font-size: 55px;
+  position: static;
+}
+
+.hero .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-color: #000;
+}
+
+/* About Me */
+#aboutMe {
+    margin: 2rem 0;
+}
+  
+#aboutMe .bioInfo {
+    display: grid;
+    grid-template-areas:
+        "bioimage bio bio";
+    grid-gap: 1.2rem;
+}
+
+#aboutMe .bioInfo .bio p {
+    padding-bottom: 1rem;
+}
+
+#aboutMe .bioInfo .bioImage {
+    grid-area: bioimage;
+    /* max-width: 300px; */
+    /* height: auto; */
+}
+
+#aboutMe .bioInfo .bio {
+    grid-area: bio;
+    border-left: 3px solid var(--primary-color);
+    padding: 0.8rem;
+}
+
+#aboutMe .bio-info .bio h4 {
+    font-size: 1.5rem;
+}
+
+
+
+/* Skills */
+#skills {
+    margin: 2rem;
+}
+
+
+
+/* Projects */
+#projects {
+    padding: 2rem 0;
+}
+
+/* Contact */
+#contact {
+    padding: 2rem 0;
+}
+
+#content .section-title {
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#content .bottom-line {
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#contact .contact {
+    display: grid;
+    grid-template-areas: "email phone linkedIn";
+    grid-gap: 1.2rem;
+}
+
+#contact .contact .email {
+    grid-area: email;
+    }
+
+#contact .contact .phone {
+    grid-area: phone;
+}
+
+#contact .contact .socialMedia {
+    grid-area: linkedIn;
+}
+
+#contact .contact .email .fa,
+#contact .contact .phone .fa,
+#contact .contact .socialMedia .fa {
+    color: var(--primary-color);
+    margin: 1rem;
+}
+
+#contact .contact .socialMedia a {
+    transition: color 0.2s ease-in-out;
+    color: #fff;
+}
+
+#contact .contact .socialMedia a:hover {
+    color: var(--secondary-color);
+}
+
+/* Footer */
+#mainFooter .footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+}
+  
+#mainFooter .footerContent .social i {
+    border: 2px #333 solid;
+    margin-left: 0.2rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    text-align: center;
+    transition: all 0.2s ease-out;
+}
+  
+#mainFooter .footerContent .social i:hover {
+    background: var(--primary-color);
+}
+
+/* Intro */
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      --primary-color: #137ff2;
+      --secondary-color: #ff6303;
+}
+  
+.slider {
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.introText {
+    color: rgb(233, 233, 233);
+    font-family: "Heebo", sans-serif;
+    font-size: 3rem;
+}
+
+.introText .text {
+    color: rgb(212, 209, 209);
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+}
+
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 0.75rem;
+}
+    
+::-webkit-scrollbar-track {
+    background: #333;
+}
+    
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3rem;
+}

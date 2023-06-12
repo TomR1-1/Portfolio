@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---Add scripts and stylesheet stuff here-->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+
+    <script src="./scripts/typewriterEffect.js"></script>
+    <script src="https://kit.fontawesome.com/c7aa52285c.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>
+        Tom Rotbart Portfolio
+    </title>
+</head>
+
+<body id="home">
+    <header class="hero">
+        <div id="navbar" class="navbar">
+            <h1 class="logo">
+                <p><a href="#home"><span>Tom</span> Rotbart</a></p>
+            </h1>
+
+            <nav>
+                <ul>
+                    <li><a id="homeSection" href="#home" class="current">Home</a></li>
+                    <li><a id="aboutMeSection" href="#aboutMe">About Me</a></li>
+                    <li><a id="skillsSection" href="#skills">Skills</a></li>
+                    <li><a id="projectsSection" href="#projects">Projects</a></li>
+                    <li><a id="contactSection" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <h1>Hello! My name is Tom and I like to:</h1>
+            <p>
+                <span
+                class="txtRotate"
+                data-period="1000"
+                data-rotate='["Computational Fluid Dynamics", "PLCs & Automation", "Ultimate Frisbee"]'>
+                </span>
+            </p>
+        </div>        
+    </header>
+
+    <main>
+        <section id="aboutMe" class="textCenter">
+            <div class="container">
+                <h2 class="sectionTitle">About Me</h2>
+                <div class="bottomLine"></div>
+                <p class="lead">Let me tell you a little about myself and what I do</p>
+                <div class="bioInfo">
+                    <img src="./images/Tom Rotbart - Head Shot.png"
+                        alt="" class="bioImage">
+                    <div class="bio bgLight">
+                        <h4><span>Biography</span></h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi deserunt consectetur adipisci officiis eius aut impedit saepe ex? Voluptatem ducimus doloribus perspiciatis magni? Aspernatur ex perspiciatis, odit laudantium, omnis saepe modi recusandae quos amet est vel debitis repudiandae! Vitae, veniam laborum. Facilis, dicta! Accusantium minima totam voluptas! Aliquam quaerat tempore deleniti cum nemo sint error commodi iure nostrum ducimus architecto consequuntur cupiditate praesentium dicta nulla temporibus voluptatem accusantium inventore, fuga dolore? Dolorem molestiae quia temporibus non impedit id, nesciunt similique pariatur illo voluptas vitae mollitia labore a officiis commodi tempore fugit in itaque nihil. Impedit sapiente eum dicta aut in?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 class="sectionTitle">Technical Skills</h2>
+            <div class="bottomLine"></div>
+            <p>I apparently have skills</p>
+        </section>
+
+        <section id="projects" class="textCenter">
+            <div class="container">
+                <h2 class="sectionTitle">My Projects</h2>
+                <div class="bottomLine"></div>
+                <p class="lead">Here are some of my past projects</p>
+
+                <div class="pastProjects">
+                    Add slider with pop up cards here
+                </div>
+
+                <!--Add button here for "See More"?-->
+            </div>
+        </section>
+
+        <section id="contact" class="textCenter bgDark">
+            <div class="container">
+                <h2 class="sectionTitle">Contact Me!</h2>
+                <div class="bottomLine"></div>
+                <p class="lead">Here is how you can contact me</p>
+                <div class="contact">
+                    <div class="email">
+                        <i class="fa fa-envelope fa-2x"></i>
+                        <h3>Email</h3>
+                        <p>TomRotbart@gmail.com</p>
+                    </div>
+
+                    <div class="phone">
+                        <i class="fa fa-phone fa-2x"></i>
+                        <h3>Phone</h3>
+                        <p>(555) 555-5555</p>
+                    </div>
+
+                    <div class="socialMedia">
+                        <a href="https://www.linkedin.com/in/tom-rotbart-362923255/" target="_blank">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                            <h3>Social Media</h3>
+                            <p>LinkedIn</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="mainFooter">
+        <div class="footerContent container">
+            <p>Copyright &copy; Tomothy. All Rights Reserved</p>
+
+            <div class="social">
+                <a href="https://www.linkedin.com/in/tom-rotbart-362923255/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/formula.ubc/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+                <!--RESUME DOWNLOAD BUTTON-->
+                <i class="fa fa-file"></i>
+                <!--EMAIL BUTTON-->
+                <i class="fa fa-inbox"></i>
+                <a href="https://www.formulaubc.com/" target="_blank"><i class="fa fa-chrome"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="intro">
+        <div class="introText">
+            <h1 class="hide">
+                <span class="text">Tom Rotbart's</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text">Personal</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text">Portfolio.</span>
+            </h1>
+        </div>
+    </div>
+    <div class="slider"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="./scripts/intro.js"></script>
+    <script src="./scripts/navbarTransition.js"></script>
+    <script src="./scripts/refreshToTop.js"></script>
+    <script src="./scripts/elementInView.js"></script>
+
+</body>
+</html>
