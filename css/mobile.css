@@ -47,7 +47,8 @@
     #contact .contact {
         grid-template-areas:
         "email"
-        "phone";
+        "phone"
+        "linkedIn";
     }
 
     #mainFooter .footerContent {
