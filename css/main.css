@@ -42,7 +42,7 @@ img {
 }
   
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     background: #fff;
     color: #333;
     line-height: 1.4;
@@ -85,6 +85,10 @@ body {
 
 .navbar ul {
     display: flex;
+}
+
+.navbar .btn {
+    margin-left: 1rem;
 }
 
 /* Header */
@@ -183,6 +187,31 @@ body {
     padding: 2rem 0;
 }
 
+#projects .pastProjects {
+    margin: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 0.5rem;
+    padding-bottom: 1.2rem;
+}
+
+#projects .pastProjects a {
+    transition: all 0.2s ease-out;
+}
+
+#projects .pastProjects a:hover {
+    opacity: 0.8;
+}
+
+#projects .pastProjects img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* #projects .projectButtons div {
+    margin: auto 1rem auto 1rem;
+} */
+
 /* Contact */
 #contact {
     padding: 2rem 0;
@@ -225,7 +254,7 @@ body {
 
 #contact .contact .linkedIn a {
     transition: color 0.2s ease-in-out;
-    color: #fff;
+    color: #333;
 }
 
 #contact .contact .linkedIn a:hover {
@@ -251,7 +280,7 @@ body {
 }
   
 #mainFooter .footerContent .social i:hover {
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 /* Intro */

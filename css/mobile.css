@@ -1,4 +1,9 @@
 @media (max-width: 600px) {
+    .hero {
+        background: none;
+        height: 27vh;
+        padding-top: 5vh;
+    }
     .hero .navbar {
         flex-direction: column;
         justify-content: flex-start;
@@ -38,6 +43,14 @@
         grid-template-areas:
         "bioimage bioimage bioimage"
         "bio bio bio"
+    }
+
+    #projects .lead {
+        margin-bottom: 1rem;
+    }
+
+    #projects .projectButtons div {
+        margin-top: 1rem;
     }
 
     #projects .pastProjects {

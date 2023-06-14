@@ -29,9 +29,9 @@
             <nav>
                 <ul>
                     <li><a id="homeSection" href="#home" class="current">Home</a></li>
-                    <li><a id="aboutMeSection" href="#aboutMe">About Me</a></li>
-                    <li><a id="skillsSection" href="#skills">Skills</a></li>
-                    <li><a id="projectsSection" href="#projects">Projects</a></li>
+                    <li><a id="aboutMeSection" href="#aboutMeLink">About</a></li>
+                    <li><a id="skillsSection" href="#skillsLink">Skills</a></li>
+                    <li><a id="projectsSection" href="#projectsLink">Projects</a></li>
                     <li><a id="contactSection" href="#contact">Contact</a></li>
                     <a class="btn" href="./files/Tom Rotbart - Resume - OLD.pdf" target="_blank">Resume</a>
                 </ul>
@@ -51,6 +51,7 @@
     </header>
 
     <main>
+        <div id="aboutMeLink" class="linkCorrection"></div>
         <section id="aboutMe" class="textCenter">
             <div class="container">
                 <h2 class="sectionTitle">About Me</h2>
@@ -67,27 +68,41 @@
             </div>
         </section>
 
+        <div id="skillsLink" class="linkCorrection"></div>
         <section id="skills" class="skills">
             <h2 class="sectionTitle">Technical Skills</h2>
             <div class="bottomLine"></div>
-            <p>I apparently have skills</p>
+            <p class="lead textCenter">I apparently have skills</p>
         </section>
 
-        <section id="projects" class="textCenter">
+        <div id="projectsLink" class="linkCorrection"></div>
+        <section id="projects" class="textCenter bgDark">
             <div class="container">
                 <h2 class="sectionTitle">My Projects</h2>
                 <div class="bottomLine"></div>
                 <p class="lead">Here are some of my past projects</p>
 
-                <div class="pastProjects">
-                    Add slider with pop up cards here
+                <div class="projectButtons">
+                    <!-- <button type="button" onclick="openModal('myModal1')">Project One</button>-->
+                    <div id="aeroButton" class="btnActive">Aerodynamics</div>
+                    <div id="codingButton" class="btn">Coding</div>
+                    <div id="plcButton" class="btn">PLC & Automation</div>
                 </div>
 
-                <!--Add button here for "See More"?-->
+                <div class="pastProjects">
+                    <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
+                    <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
+                    <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
+                    <!-- <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
+                    <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
+                    <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
+                    <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
+                    <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div> -->
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="textCenter bgDark">
+        <section id="contact" class="textCenter">
             <div class="container">
                 <h2 class="sectionTitle">Contact Me!</h2>
                 <div class="bottomLine"></div>
@@ -109,7 +124,7 @@
                         <a href="https://www.linkedin.com/in/tom-rotbart-362923255/" target="_blank">
                             <i class="fa fa-linkedin fa-2x"></i>
                             <h3>Social Media</h3>
-                            <p>LinkedIn</p>
+                            <p>LinkedIn &#x2197;</p>
                         </a>
                     </div>
                 </div>
@@ -117,7 +132,7 @@
         </section>
     </main>
 
-    <footer id="mainFooter">
+    <footer id="mainFooter" class="bgLight">
         <div class="footerContent container">
             <p>Copyright &copy; Tomothy. All Rights Reserved</p>
 
@@ -150,6 +165,6 @@
     <script src="./scripts/navbarTransition.js"></script>
     <script src="./scripts/refreshToTop.js"></script>
     <script src="./scripts/elementInView.js"></script>
-
+    <script src="./scripts/projects.js"></script>
 </body>
 </html>

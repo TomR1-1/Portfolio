@@ -19,7 +19,6 @@ function underlineNav(sectionInView) {
 $(document).on('scroll', function() {
 	var scrolltop = $(this).scrollTop();
     var scrollbottom = $(window).scrollTop() + $(window).height();
-    console.log($('#navbar').height());
 
 	// Bottom section to top section 
 	if (scrollbottom >= $('#contact').position().top + 2 * $('#navbar').height() ) {
