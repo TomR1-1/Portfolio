@@ -2,8 +2,9 @@
     .hero {
         background: none;
         height: 27vh;
-        padding-top: 5vh;
+        padding-top: 12vh;
     }
+
     .hero .navbar {
         flex-direction: column;
         justify-content: flex-start;
