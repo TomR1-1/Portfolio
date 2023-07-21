@@ -48,7 +48,7 @@ body {
     line-height: 1.4;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
     display: flex;
     align-items: center;
@@ -91,7 +91,7 @@ body {
     margin-left: 1rem;
 }
 
-/* Header */
+/* HEADER */
 .hero {
     background: url("https://github.com/TomR1-1/Portfolio/blob/main/css/images/Sandy.JPG?raw=true");
     background-repeat: no-repeat;
@@ -142,7 +142,7 @@ body {
     background-color: #000;
 }
 
-/* About Me */
+/* ABOUT ME */
 #aboutMe {
     margin: 2rem 0;
 }
@@ -173,46 +173,12 @@ body {
     font-size: 1.5rem;
 }
 
-
-
-/* Skills */
+/*  SKILLS */
 #skills {
     margin: 2rem;
 }
 
-
-
-/* Projects */
-#projects {
-    padding: 2rem 0;
-}
-
-#projects .pastProjects {
-    margin: 2rem 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 0.5rem;
-    padding-bottom: 1.2rem;
-}
-
-#projects .pastProjects a {
-    transition: all 0.2s ease-out;
-}
-
-#projects .pastProjects a:hover {
-    opacity: 0.8;
-}
-
-#projects .pastProjects img {
-    max-width: 300px;
-    height: auto;
-}
-
-/* #projects .projectButtons div {
-    margin: auto 1rem auto 1rem;
-} */
-
-/* Contact */
+/* CONTACT */
 #contact {
     padding: 2rem 0;
 }
@@ -261,7 +227,7 @@ body {
     color: var(--secondary-color);
 }
 
-/* Footer */
+/* FOOTER */
 #mainFooter .footerContent {
     display: flex;
     align-items: center;
@@ -283,7 +249,7 @@ body {
     background: var(--secondary-color);
 }
 
-/* Intro */
+/* ONLOAD ANIMATION */
 .intro {
     background: black;
     position: fixed;
@@ -328,7 +294,7 @@ body {
     display: inline-block;
 }
 
-/* Scroll Bar */
+/* SCROLL BAR */
 ::-webkit-scrollbar {
     width: 0.75rem;
 }

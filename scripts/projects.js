@@ -1,3 +1,4 @@
+//Project Buttons
 const aeroButton = document.getElementById("aeroButton")
 const codingButton = document.getElementById("codingButton")
 const plcButton = document.getElementById("plcButton")
@@ -18,9 +19,14 @@ aeroButton.addEventListener("click", () => {
         }
 
         pastProjects.innerHTML = `
-            <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
-            <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
-            <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
+        <img class="image" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
+        <img class="image" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
+        <img class="image" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
+        <img class="image" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
+        <img class="image" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
+        <img class="image" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
+        <img class="image" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
+        <img class="image" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
         `;
     }
 });
@@ -72,4 +78,25 @@ function removeActiveBtn(object) {
 function addActiveBtn(object) {
     object.classList.add("btnActive");
     object.classList.remove("btn");
+}
+
+// Modal JS
+const modal = document.getElementById("modal");
+// const modalContent = document.getElementById("modalContent");
+const p1 = document.getElementById("p1");
+const p2 = document.getElementById("p2");
+const closeButton = document.getElementsByClassName("close")[0];
+
+p1.onclick = function() {
+    modal.style.display = "block";
+}
+
+closeButton.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }

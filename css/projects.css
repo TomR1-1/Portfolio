@@ -1,0 +1,93 @@
+:root {
+    --primary-color: #137ff2;
+    --secondary-color: #ff6303;
+  }
+
+/* PROJECTS */
+/* #projects {
+    padding: 2rem 0;
+} */
+
+#projects .pastProjects {
+    margin: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    flex-basis: 100%;
+    grid-gap: 1rem;
+    padding-bottom: 1.2rem;
+}
+
+#projects .pastProjects img {
+    width: 500px;
+    height: auto;
+}
+
+#projects .projectContainer {
+    position: relative;
+    /* float: left; */
+    margin-right: 10px;
+    /* border: 2px solid pink; */
+}
+  
+#projects .projectText {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#projects .projectContainer:hover {
+    cursor: pointer;
+}
+
+#projects .projectContainer:hover .projectText {
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7;
+}
+
+/* MODAL */
+#projects .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
+}
+
+#projects .modalContent {
+    color: #333;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+#projects .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#projects .close:hover,
+#projects .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
