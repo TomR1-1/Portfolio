@@ -26,6 +26,16 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    #projects .pastProjects {
+        margin: 2rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr));
+        flex-basis: 50%;
+        grid-gap: 1rem;
+    }
+}
+
 #projects .pastProjects img {
     aspect-ratio: 4/3;
     object-fit: contain;
@@ -172,4 +182,31 @@
 
 #projects .modalContent p {
     text-align: justify;
+}
+
+@media (max-width: 600px) {
+    #projects .lead {
+        margin-bottom: 1rem;
+    }
+
+    #projects .projectButtons div {
+        margin-top: 1rem;
+    }
+
+    #projects .projectText {
+        position: relative;
+        width: 100%;
+        padding: 8px 15px;
+        visibility: visible;
+        background: rgba(0, 0, 0, 0.7);
+        transition: none;
+    }
+
+    #projects .slideshowContainer {
+        display: none;
+    }
+
+    #projects .dots {
+        display: none;
+    }
 }

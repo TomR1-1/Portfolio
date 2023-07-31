@@ -19,45 +19,44 @@ aeroButton.addEventListener("click", () => {
         }
 
         pastProjects.innerHTML = `
-            <div class="projectContainer">
+            <div class="projectContainer bgProject">
                 <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
                 <div class="projectText">Project 1</div>
             </div>
-            
 
-            <div class="projectContainer">
+            <div class="projectContainer bgProject">
                 <img class="image" id="p1" src="./css/images/Rusty.jpg" alt="">
                 <div class="projectText">Project 2</div>
             </div>
             
-            <div class="projectContainer">
+            <div class="projectContainer bgProject">
                 <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
                 <div class="projectText">Project 1</div>
             </div>
 
-            <div class="projectContainer">
+            <div class="projectContainer bgProject">
                 <img class="image" id="p1" src="./css/images/Sandy.JPG" alt="">
                 <div class="projectText">Project 1</div>
             </div>
 
-            <div class="projectContainer">
+            <div class="projectContainer bgProject">
                 <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
                 <div class="projectText">Project 1</div>
             </div>
 
-            <div class="projectContainer">
+            <div class="projectContainer bgProject">
                 <img class="image" id="p1" src="./css/images/test1.JPG" alt="">
                 <div class="projectText">Project 1</div>
             </div>
 
-            <div class="projectContainer">
+            <div class="projectContainer bgProject">
                 <img class="image" id="p1" src="./css/images/test2.JPG" alt="">
                 <div class="projectText">Project 1</div>
             </div>
 
-            <div class="projectContainer">
-                <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
-                <div class="projectText">Project 1</div>
+            <div class="projectContainer bgProject">
+                <img class="image" id="codingProject1" src="./css/images/Coding - Project 1 - Title.png" alt="">
+                <div class="projectText">Website Portfolio</div>
             </div>
         `;
     }
