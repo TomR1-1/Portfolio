@@ -9,7 +9,6 @@
         flex-direction: column;
         justify-content: flex-start;
         height: 65px;
-        padding-bottom: 5rem;
     }
 
     .hero .navbar .logo {
@@ -55,33 +54,12 @@
         /* height: auto; */
     }
 
-    #aboutMe .bioInfo .thirdWidth {
-        width: 100vw;
-    }
-
     #projects .lead {
         margin-bottom: 1rem;
     }
 
     #projects .projectButtons div {
         margin-top: 1rem;
-    }
-
-    #projects .projectText {
-        position: relative;
-        width: 100%;
-        padding: 8px 15px;
-        visibility: visible;
-        background: rgba(0, 0, 0, 0.7);
-        transition: none;
-    }
-
-    #projects .slideshowContainer {
-        display: none;
-    }
-
-    #projects .dots {
-        display: none;
     }
 
     #contact .contact {
