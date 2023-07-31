@@ -42,12 +42,11 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    background: black;
+    background: rgba(0, 0, 0, 0);
     color: white;
-    opacity: 0;
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.3s ease; 
-    transition: visibility 0s, opacity 0.3s ease;
+    transition: visibility 0s, background 0.3s ease;
 }
 
 #projects .projectContainer:hover {
@@ -58,7 +57,7 @@
     width: 100%;
     padding: 8px 15px;
     visibility: visible;
-    opacity: 0.7;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 
@@ -67,7 +66,6 @@
     display: none; 
     position: fixed; 
     z-index: 1; 
-    padding-top: 100px; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -80,8 +78,8 @@
 #projects .modalContent {
     color: #333;
     background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
+    margin: 5% auto; 
+    padding: 2rem;
     border: 1px solid #888;
     width: 80%; 
 }
@@ -170,4 +168,8 @@
 
 #projects .active, #projects .dot:hover {
     background-color: #717171;
+}
+
+#projects .modalContent p {
+    text-align: justify;
 }

@@ -112,17 +112,14 @@ function addActiveBtn(object) {
     object.classList.remove("btn");
 }
 
+
+
 // MODAL JAVASCRIPT CODE
 
 // Making the modal appear and dissapear
 const modal = document.getElementById("modal");
-const p1 = document.getElementById("p1");
-const p2 = document.getElementById("p2");
+const modalContent = document.querySelector(".modalContent")
 const closeButton = document.getElementsByClassName("close")[0];
-
-p1.onclick = function() {
-    modal.style.display = "block";
-}
 
 closeButton.onclick = function() {
     modal.style.display = "none";
@@ -132,6 +129,26 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+// Aerodynamics Projects
+const p1 = document.getElementById("p1");
+const p2 = document.getElementById("p2");
+
+p1.onclick = function() {
+    modal.style.display = "block";
+}
+
+// CFD Projects
+
+// Coding Projects
+const codingProject1 = document.getElementById("codingProject1");
+
+codingProject1.onclick = function() {
+    // modalContent.innerHTML = `
+
+    // `;
+    modal.style.display = "block";
 }
 
 // Adding the carousel
@@ -165,7 +182,7 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    
+
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
 }
