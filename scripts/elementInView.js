@@ -1,6 +1,6 @@
 function underlineNav(sectionInView) {
 	var section = document.getElementById(sectionInView);
-	var sections = ["homeSection", "aboutMeSection", "skillsSection", "projectsSection", "contactSection"];
+	var sections = ["homeSection", "aboutMeSection", "projectsSection", "contactSection"];
 	
 	for (i = 0; i < sections.length; i++) {
 	
@@ -27,9 +27,6 @@ $(document).on('scroll', function() {
 	else if (scrolltop >= $('#projects').position().top - 2 * $('#navbar').height()) {
 		underlineNav('projectsSection');
 	}  
-	else if (scrolltop >= $('#skills').position().top - 2 * $('#navbar').height()) {
-		underlineNav('skillsSection');
-	}
 	else if (scrolltop >= $('#aboutMe').position().top - 2 * $('#navbar').height()) {
 		underlineNav('aboutMeSection');
 	}
