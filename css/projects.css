@@ -46,8 +46,8 @@
     color: white;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: visibility 0s, opacity 0.5s linear; 
-    transition: visibility 0s, opacity 0.5s linear;
+    -webkit-transition: visibility 0s, opacity 0.3s ease; 
+    transition: visibility 0s, opacity 0.3s ease;
 }
 
 #projects .projectContainer:hover {
@@ -91,6 +91,8 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    position: relative;
+    z-index: 1;
 }
 
 #projects .close:hover,
@@ -98,4 +100,74 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#projects .slideshowContainer {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+#projects .slide {
+    display: none;
+}
+
+#projects .previous, #projects .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #f4f4f4;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#projects .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#projects .previous {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#projects .previous:hover, #projects .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+#projects .text {
+    color: #333;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+#projects .dots {
+    margin: 1rem;
+}
+
+#projects .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+#projects .active, #projects .dot:hover {
+    background-color: #717171;
 }

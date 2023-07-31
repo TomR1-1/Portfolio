@@ -112,9 +112,10 @@ function addActiveBtn(object) {
     object.classList.remove("btn");
 }
 
-// Modal JS
+// MODAL JAVASCRIPT CODE
+
+// Making the modal appear and dissapear
 const modal = document.getElementById("modal");
-// const modalContent = document.getElementById("modalContent");
 const p1 = document.getElementById("p1");
 const p2 = document.getElementById("p2");
 const closeButton = document.getElementsByClassName("close")[0];
@@ -131,4 +132,40 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+// Adding the carousel
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+function goToSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {
+        slideIndex = 1;
+    }    
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
 }
