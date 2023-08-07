@@ -36,7 +36,7 @@
     }
 }
 
-#projects .pastProjects img {
+#projects .pastProjects .projectContainer img {
     aspect-ratio: 4/3;
     object-fit: contain;
     width: 100%;
@@ -180,6 +180,10 @@
     background-color: #717171;
 }
 
+#projects .modalContent h2 {
+    padding-top: 2rem;
+}
+
 #projects .modalContent p {
     text-align: justify;
 }
@@ -208,5 +212,13 @@
 
     #projects .dots {
         display: none;
+    }
+
+    #projects .modalContent {
+        margin: 15% auto; 
+    }
+
+    #projects .modalContent h2 {
+        font-size: 25px;
     }
 }

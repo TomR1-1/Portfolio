@@ -83,10 +83,10 @@
                     <div id="plcButton" class="btn">PLC & Automation</div>
                 </div>
 
-                <div class="pastProjects">
+                <div class="pastProjects pastProjectsAerodynamics">
                     
                     <div class="projectContainer bgProject">
-                        <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
+                        <img class="image" id="test" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
                         <div class="projectText">Project 1</div>
                     </div>
 
@@ -125,47 +125,85 @@
                         <div class="projectText">Website Portfolio</div>
                     </div>
 
-                </div>
-            </div>
-            
-            <!-- Modal -->
-            <div id="modal" class="modal">
-                <!-- Modal Content -->
-                <div class="modalContent">
-                    <span class="close">&times;</span>
-                    <div class="slideshowContainer">
+                    <!-- Modal -->
+                    <div id="websitePortfolioModal" class="modal">
+                        <!-- Modal Content -->
+                        <div class="modalContent">
+                            <span class="websitePortfolioCloseButton close">&times;</span>
+                            <h2 class="sectionTitle">Website Portfolio</h2>
+                            <div class="bottomLine"></div>
+                            <div class="slideshowContainer">
 
-                        <div class="slide">
-                            <img src="./css/images/Coding - Project 1 - Modal - Pic. 1.png" style="width: 100%">
-                            <div class="text">Testing mobile display & responsivenes</div>
+                                <div class="slide">
+                                    <img src="./css/images/Coding - Project 1 - Modal - Pic. 1.png">
+                                    <div class="text">Testing mobile display & responsivenes</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Coding - Project 1 - Modal - Pic. 2.png">
+                                    <div class="text">Initial image sizing problem</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Coding - Project 1 - Modal - Pic. 3.png">
+                                    <div class="text">Working on editing this modal</div>
+                                </div>
+
+                                <a class="previous" onclick="changeSlide(-1)"><</a>
+                                <a class="next" onclick="changeSlide(1)">></a>
+
+                            </div>
+
+                            <div class="dots" style="text-align: center;">
+                                <span class="dot" onclick="goToSlide(1)"></span>
+                                <span class="dot" onclick="goToSlide(2)"></span>
+                                <span class="dot" onclick="goToSlide(3)"></span>
+                            </div>
+
+                            <p>This website is coded in HTML, CSS, and JavaScript with a little bit of jQuery. No ChatGPT or AI was used in creating this website! Prior to making this website, I had some web dev experience, making a photo storage system using the Django framework, but I primarily worked on the backend in Python. Furthermore, this is the first time I made this website mobile responsive. 
+                                <br><br>The main challenge of this website was setting up the “My Projects” section. First, I had several issues regarding image sizing. It upset me how differently sized images looked uneven. I ended up encountering a solution to this problem after some time away on a social media app. It consisted of using aspect ratios, a maximum width, and making sure the image fit the container it was in while keeping the same aspect ratio (“object-fill: contain;”). Once I found this solution, it became a game of styling the page to my liking – this part is quite difficult itself without tools such as Figma. 
+                                <br><br>My favourite part about my website is the pop-up modal that you are reading this text from. It required a lot of research and tuning, but it turned out great! 
+                                <br><br>A key limitation I encountered is that this website needed to be static to host it on GitHub. This meant that despite having experience using the Django framework, I was not able to design a portfolio with it since it is a dynamic website. In the future I will consider this option.
+                            </p>
                         </div>
-
-                        <div class="slide">
-                            <img src="./css/images/Coding - Project 1 - Modal - Pic. 2.png" style="width: 100%">
-                            <div class="text">Initial image sizing problem</div>
-                        </div>
-
-                        <div class="slide">
-                            <img src="./css/images/Coding - Project 1 - Modal - Pic. 3.png" style="width: 100%">
-                            <div class="text">Working on editing this modal</div>
-                        </div>
-
-                        <a class="previous" onclick="changeSlide(-1)"><</a>
-                        <a class="next" onclick="changeSlide(1)">></a>
-
                     </div>
 
-                    <div class="dots" style="text-align: center;">
-                        <span class="dot" onclick="goToSlide(1)"></span>
-                        <span class="dot" onclick="goToSlide(2)"></span>
-                        <span class="dot" onclick="goToSlide(3)"></span>
+                    <div id="otherModal" class="modal">
+                        <!-- Modal Content -->
+                        <div class="modalContent">
+                            <span class="otherModalCloseButton close">&times;</span>
+                            <h2 class="sectionTitle">Other Modal</h2>
+                            <div class="bottomLine"></div>
+                            <div class="slideshowContainer">
+
+                                <div class="slide">
+                                    <img src="./css/images/test2.JPG">
+                                    <div class="text">Initial image sizing problem</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Rusty.jpg">
+                                    <div class="text">Working on editing this modal</div>
+                                </div>
+
+                                <a class="previous" onclick="changeSlide(-1)"><</a>
+                                <a class="next" onclick="changeSlide(1)">></a>
+
+                            </div>
+
+                            <div class="dots" style="text-align: center;">
+                                <span class="dot" onclick="goToSlide(1)"></span>
+                                <span class="dot" onclick="goToSlide(2)"></span>
+                            </div>
+
+                            <p>This website is coded in HTML, CSS, and JavaScript with a little bit of jQuery. No ChatGPT or AI was used in creating this website! Prior to making this website, I had some web dev experience, making a photo storage system using the Django framework, but I primarily worked on the backend in Python. Furthermore, this is the first time I made this website mobile responsive. 
+                                <br><br>The main challenge of this website was setting up the “My Projects” section. First, I had several issues regarding image sizing. It upset me how differently sized images looked uneven. I ended up encountering a solution to this problem after some time away on a social media app. It consisted of using aspect ratios, a maximum width, and making sure the image fit the container it was in while keeping the same aspect ratio (“object-fill: contain;”). Once I found this solution, it became a game of styling the page to my liking – this part is quite difficult itself without tools such as Figma. 
+                                <br><br>My favourite part about my website is the pop-up modal that you are reading this text from. It required a lot of research and tuning, but it turned out great! 
+                                <br><br>A key limitation I encountered is that this website needed to be static to host it on GitHub. This meant that despite having experience using the Django framework, I was not able to design a portfolio with it since it is a dynamic website. In the future I will consider this option.
+                            </p>
+                        </div>
                     </div>
 
-                    <p>This website is coded in HTML, CSS, and JavaScript with a little bit of jQuery. No ChatGPT or AI was used in creating this website! Prior to making this website, I had some web dev experience, making a photo storage system using the Django framework, but I primarily worked on the backend in Python. Furthermore, this is the first time I made this website mobile responsive. 
-                        <br><br>The main challenge of this website was setting up the “My Projects” section. First, I had several issues regarding image sizing. It upset me how differently sized images looked uneven. I ended up encountering a solution to this problem after some time away on a social media app. It consisted of using aspect ratios, a maximum width, and making sure the image fit the container it was in while keeping the same aspect ratio (“object-fill: contain;”). Once I found this solution, it became a game of styling the page to my liking – this part is quite difficult itself without tools such as Figma. 
-                        <br><br>My favourite part about my website is the pop-up modal that you are reading this text from. It required a lot of research and tuning, but it turned out great! 
-                        <br><br>A key limitation I encountered is that this website needed to be static to host it on GitHub. This meant that despite having experience using the Django framework, I was not able to design a portfolio with it since it is a dynamic website. In the future I will consider this option.
-                    </p>
                 </div>
             </div>
 
@@ -203,13 +241,13 @@
 
     <footer id="mainFooter" class="bgLight">
         <div class="footerContent container">
-            <p>Version 1.15</p>
+            <p>Version 1.16</p>
 
             <div class="social">
-                <a href="https://www.linkedin.com/in/tom-rotbart-362923255/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/formula.ubc/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.formulaubc.com/" target="_blank"><i class="fa fa-chrome"></i></a>
-                <a href="./files/Tom Rotbart - Resume - OLD.pdf" target="_blank"><i class="fa fa-file"></i></a>
+                <a href="https://www.linkedin.com/in/tom-rotbart-362923255/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/formula.ubc/?hl=en" target="_blank" title="Formula UBC Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.formulaubc.com/" target="_blank" title="Formula UBC Website"><i class="fa fa-chrome"></i></a>
+                <a href="./files/Tom Rotbart - Resume - OLD.pdf" target="_blank" title="Resume"><i class="fa fa-file"></i></a>
             </div>
         </div>
     </footer>

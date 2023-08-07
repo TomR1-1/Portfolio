@@ -1,9 +1,9 @@
 //Project Buttons
-const aeroButton = document.getElementById("aeroButton")
-const codingButton = document.getElementById("codingButton")
-const plcButton = document.getElementById("plcButton")
+let aeroButton = document.getElementById("aeroButton");
+let codingButton = document.getElementById("codingButton");
+let plcButton = document.getElementById("plcButton");
 
-const pastProjects = document.querySelector(".pastProjects")
+let pastProjectsAerodynamics = document.querySelector(".pastProjectsAerodynamics");
 
 //If the areo button is not already active, add the active button class
 //Also remove the active class from the other buttons
@@ -18,47 +18,7 @@ aeroButton.addEventListener("click", () => {
             removeActiveBtn(plcButton);
         }
 
-        pastProjects.innerHTML = `
-            <div class="projectContainer bgProject">
-                <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
-                <div class="projectText">Project 1</div>
-            </div>
-
-            <div class="projectContainer bgProject">
-                <img class="image" id="p1" src="./css/images/Rusty.jpg" alt="">
-                <div class="projectText">Project 2</div>
-            </div>
-            
-            <div class="projectContainer bgProject">
-                <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
-                <div class="projectText">Project 1</div>
-            </div>
-
-            <div class="projectContainer bgProject">
-                <img class="image" id="p1" src="./css/images/Sandy.JPG" alt="">
-                <div class="projectText">Project 1</div>
-            </div>
-
-            <div class="projectContainer bgProject">
-                <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
-                <div class="projectText">Project 1</div>
-            </div>
-
-            <div class="projectContainer bgProject">
-                <img class="image" id="p1" src="./css/images/test1.JPG" alt="">
-                <div class="projectText">Project 1</div>
-            </div>
-
-            <div class="projectContainer bgProject">
-                <img class="image" id="p1" src="./css/images/test2.JPG" alt="">
-                <div class="projectText">Project 1</div>
-            </div>
-
-            <div class="projectContainer bgProject">
-                <img class="image" id="codingProject1" src="./css/images/Coding - Project 1 - Title.png" alt="">
-                <div class="projectText">Website Portfolio</div>
-            </div>
-        `;
+        showPastProject(pastProjectsAerodynamics);
     }
 });
 
@@ -73,10 +33,7 @@ codingButton.addEventListener("click", () => {
             removeActiveBtn(plcButton);
         }
 
-        pastProjects.innerHTML = `
-        <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
-        <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
-        `;
+        hide(pastProjectsAerodynamics);
     }
 });
 
@@ -114,41 +71,50 @@ function addActiveBtn(object) {
 
 
 // MODAL JAVASCRIPT CODE
-
+let websitePortfolioModal = document.getElementById("websitePortfolioModal");
+let otherModal = document.getElementById("otherModal");
+// let modalContent = document.querySelector(".modalContent")
+let websitePortfolioCloseButton = document.getElementsByClassName("websitePortfolioCloseButton")[0];
+let otherModalCloseButton = document.getElementsByClassName("otherModalCloseButton")[0];
 // Making the modal appear and dissapear
-const modal = document.getElementById("modal");
-const modalContent = document.querySelector(".modalContent")
-const closeButton = document.getElementsByClassName("close")[0];
 
-closeButton.onclick = function() {
-    modal.style.display = "none";
+websitePortfolioCloseButton.onclick = function() {
+    hide(websitePortfolioModal);
+}
+
+otherModalCloseButton.onclick = function() {
+    hide(otherModal);
 }
 
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == websitePortfolioModal) {
+        hide(websitePortfolioModal);
+    }
+    if (event.target == otherModal) {
+        hide(otherModal);
     }
 }
 
 // Aerodynamics Projects
-const p1 = document.getElementById("p1");
-const p2 = document.getElementById("p2");
-
-p1.onclick = function() {
-    modal.style.display = "block";
+let testProject = document.getElementById("test");
+testProject.onclick = function() {
+    show(otherModal);
 }
+
 
 // CFD Projects
 
+
+
 // Coding Projects
-const codingProject1 = document.getElementById("codingProject1");
+let codingProject1 = document.getElementById("codingProject1");
 
 codingProject1.onclick = function() {
-    // modalContent.innerHTML = `
-
-    // `;
-    modal.style.display = "block";
+    show(websitePortfolioModal);
 }
+
+
+let modal = websitePortfolioModal;
 
 // Adding the carousel
 let slideIndex = 1;
@@ -164,8 +130,8 @@ function goToSlide(n) {
 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
+    let slides = modal.getElementsByClassName("slide");
+    let dots = modal.getElementsByClassName("dot");
     
     if (n > slides.length) {
         slideIndex = 1;
@@ -184,4 +150,21 @@ function showSlides(n) {
 
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
+}
+
+
+// Showing and Hiding Modals
+function hide(activeModal) {
+    activeModal.style.display = "none";
+    slideIndex = 1;
+}
+
+function show(activeModal) {
+    activeModal.style.display = "block";
+    modal = activeModal;
+    showSlides(1);
+}
+
+function showPastProject(section) {
+    section.style.display = "grid";
 }
