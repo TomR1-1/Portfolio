@@ -74,9 +74,12 @@ function addActiveBtn(object) {
 
 // MODAL JAVASCRIPT CODE
 let sandyFrontWingModal = document.getElementById("sandyFrontWingModal");
+let sandySideTunnelModal = document.getElementById("sandySideTunnelModal");
 let sandyRearWingModal = document.getElementById("sandyRearWingModal");
 
 let sandyFrontWingModalCloseButton = document.getElementsByClassName("sandyFrontWingModalCloseButton")[0];
+let sandySideTunnelModalCloseButton = document.getElementsByClassName("sandySideTunnelModalCloseButton")[0];
+let sandyRearWingModalCloseButton = document.getElementsByClassName("sandyRearWingModalCloseButton")[0];
 
 
 
@@ -92,6 +95,15 @@ sandyFrontWingModalCloseButton.onclick = function() {
     hide(sandyFrontWingModal);
 }
 
+sandySideTunnelModalCloseButton.onclick = function() {
+    hide(sandySideTunnelModal);
+}
+
+sandyRearWingModalCloseButton.onclick = function() {
+    hide(sandyRearWingModal);
+}
+
+
 websitePortfolioCloseButton.onclick = function() {
     hide(websitePortfolioModal);
 }
@@ -103,7 +115,13 @@ surfboardFinCloseButton.onclick = function() {
 window.onclick = function(event) {
     if (event.target == sandyFrontWingModal) {
         hide(sandyFrontWingModal);
-    }    
+    }  
+    if (event.target == sandySideTunnelModal) {
+        hide(sandySideTunnelModal);
+    }
+    if (event.target == sandyRearWingModal) {
+        hide(sandyRearWingModal);
+    }   
     if (event.target == websitePortfolioModal) {
         hide(websitePortfolioModal);
     }
@@ -114,10 +132,19 @@ window.onclick = function(event) {
 
 // Aerodynamics Projects
 let sandyFrontWing = document.getElementById("sandyFrontWing");
+let sandySideTunnel = document.getElementById("sandySideTunnel");
 let sandyRearWing = document.getElementById("sandyRearWing");
 
 sandyFrontWing.onclick = function() {
     show(sandyFrontWingModal);
+}
+
+sandySideTunnel.onclick = function() {
+    show(sandySideTunnelModal);
+}
+
+sandyRearWing.onclick = function() {
+    show(sandyRearWingModal);
 }
 
 

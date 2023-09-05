@@ -91,17 +91,12 @@
                     </div>
 
                     <div class="projectContainer bgProject">
-                        <img class="image" id="sandySideTunnels" src="./css/images/Projects/" alt="">
+                        <img class="image" id="sandySideTunnel" src="./css/images/Projects/Side Tunnel/Side Tunnel - Render.png" alt="">
                         <div class="projectText">Sandy (2023) - Side Tunnels</div>
-                    </div>
-                    
-                    <div class="projectContainer bgProject">
-                        <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
-                        <div class="projectText">Sandy (2023) - Side Pods</div>
                     </div>
 
                     <div class="projectContainer bgProject">
-                        <img class="image" id="p1" src="./css/images/Projects/Rear Wing/Rear Wing - Render.png" alt="">
+                        <img class="image" id="sandyRearWing" src="./css/images/Projects/Rear Wing/Rear Wing - Render.png" alt="">
                         <div class="projectText">Sandy (2023) - Rear Wing</div>
                     </div>
 
@@ -162,6 +157,112 @@
                                 <br><br>The first step for me was to read internal documentation of previous front wings. I knew to manufacture a similar wing to the 2022 year would be not possible given the tight timeline, which meant I had to read about previous geometries of complete dual element front wings. 
                                 <br><br>The front wing had to meet two main objectives; to be easy to remove and install, and to be lighter than the previous year. To account for serviceability, I took advantage of the flat portion of the monocoque chassis to install the front wing with four, easy to access bolts. I then designed the internals of the wing to consist of completely carbon fibre sandwich panel stringers, lighter than the spar and aluminum ribs previously implemented. The wing has a CD of 0.15 and a CL of 0.60.
                             </p>
+                        </div>
+                    </div>
+
+                    <div id="sandySideTunnelModal" class="modal">
+                        <!-- Modal Content -->
+                        <div class="modalContent">
+                            <span class="sandySideTunnelModalCloseButton close">&times;</span>
+                            <h2 class="sectionTitle">Sandy (2023) - Side Tunnels</h2>
+                            <div class="bottomLine"></div>
+                            <div class="slideshowContainer">
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Side Tunnel/Side Tunnel - Pressure Scene.png">
+                                    <div class="text">Pressure scene of the side tunnel from CFD</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Side Tunnel/Side Tunnel - CFD.png">
+                                    <div class="text">Side tunnel in the context of the full car</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Side Tunnel/Side Tunnel - CNCing.png">
+                                    <div class="text">Using a CNC to manufacture the mould</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Side Tunnel/Side Tunnel - MDF Mould.png">
+                                    <div class="text">MDF mould used to layup the side tunnel</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Side Tunnel/Side Tunnel - Kevlar Layup.png">
+                                    <div class="text">Laying up the side tunnels as one sandwich consisting of prepreg carbon fibre, kevlar, and rohacell foam</div>
+                                </div>
+                                
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Side Tunnel/Side Tunnel - Oven.png">
+                                    <div class="text">Preparing to cure the side tunnel layup</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Side Tunnel/Side Tunnel - Complete.JPG">
+                                    <div class="text">Completely cured side tunnel</div>
+                                </div>
+
+                                <a class="previous" onclick="changeSlide(-1)"><</a>
+                                <a class="next" onclick="changeSlide(1)">></a>
+
+                            </div>
+
+                            <div class="dots" style="text-align: center;">
+                                <span class="dot" onclick="goToSlide(1)"></span>
+                                <span class="dot" onclick="goToSlide(2)"></span>
+                                <span class="dot" onclick="goToSlide(3)"></span>
+                                <span class="dot" onclick="goToSlide(4)"></span>
+                                <span class="dot" onclick="goToSlide(5)"></span>
+                                <span class="dot" onclick="goToSlide(6)"></span>
+                                <span class="dot" onclick="goToSlide(7)"></span>
+                            </div>
+
+                            <p>TEXT ABOUT SIDE TUNNEL HERE  </p>
+                        </div>
+                    </div>
+                    
+                    <div id="sandyRearWingModal" class="modal">
+                        <!-- Modal Content -->
+                        <div class="modalContent">
+                            <span class="sandyRearWingModalCloseButton close">&times;</span>
+                            <h2 class="sectionTitle">Sandy (2023) - Rear Wing</h2>
+                            <div class="bottomLine"></div>
+                            <div class="slideshowContainer">
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Rear Wing/Rear Wing - CFD.png">
+                                    <div class="text">Rear wing CFD in the context of the full car</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Rear Wing/Rear Wing - Layup 2.jpg">
+                                    <div class="text">Carbon fibre layup of second & third their 6" chord selig 1223 aerofoil element</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Rear Wing/Rear Wing - Layup.jpg">
+                                    <div class="text">Curing both halfs of rear wing main elemenet and an endplate</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Rear Wing/Rear Wing - On Car.jpg">
+                                    <div class="text">Rear wing mounted on the car with side pods</div>
+                                </div>
+
+                                <a class="previous" onclick="changeSlide(-1)"><</a>
+                                <a class="next" onclick="changeSlide(1)">></a>
+
+                            </div>
+
+                            <div class="dots" style="text-align: center;">
+                                <span class="dot" onclick="goToSlide(1)"></span>
+                                <span class="dot" onclick="goToSlide(2)"></span>
+                                <span class="dot" onclick="goToSlide(3)"></span>
+                                <span class="dot" onclick="goToSlide(4)"></span>
+                            </div>
+
+                            <p>TEXT ABOUT REAR WING HERE  </p>
                         </div>
                     </div>
 
@@ -301,7 +402,7 @@
 
     <footer id="mainFooter" class="bgLight">
         <div class="footerContent container">
-            <p>Version 1.18 - 04/0/23</p>
+            <p>Version 1.19 - 04/0/23</p>
 
             <div class="social">
                 <a href="https://www.linkedin.com/in/tom-rotbart-362923255/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
