@@ -80,48 +80,102 @@
                 <div class="projectButtons">
                     <div id="aeroButton" class="btnActive">Aerodynamics</div>
                     <div id="codingButton" class="btn">Coding</div>
-                    <div id="plcButton" class="btn">PLC & Automation</div>
+                    <div id="cfdButton" class="btn">Computational Fluid Dynamics</div>
                 </div>
 
                 <div class="pastProjects pastProjectsAerodynamics">
                     
                     <div class="projectContainer bgProject">
-                        <img class="image" id="test" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
-                        <div class="projectText">Project 1</div>
+                        <img class="image" id="sandyFrontWing" src="./css/images/Projects/Front Wing/Front Wing - Render.png" alt="">
+                        <div class="projectText">Sandy (2023) - Front Wing</div>
                     </div>
 
                     <div class="projectContainer bgProject">
-                        <img class="image" id="p1" src="./css/images/Rusty.jpg" alt="">
-                        <div class="projectText">Project 2</div>
+                        <img class="image" id="sandySideTunnels" src="./css/images/Projects/" alt="">
+                        <div class="projectText">Sandy (2023) - Side Tunnels</div>
                     </div>
                     
                     <div class="projectContainer bgProject">
                         <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
-                        <div class="projectText">Project 1</div>
+                        <div class="projectText">Sandy (2023) - Side Pods</div>
                     </div>
 
                     <div class="projectContainer bgProject">
-                        <img class="image" id="p1" src="./css/images/Sandy.JPG" alt="">
-                        <div class="projectText">Project 1</div>
+                        <img class="image" id="p1" src="./css/images/Projects/Rear Wing/Rear Wing - Render.png" alt="">
+                        <div class="projectText">Sandy (2023) - Rear Wing</div>
                     </div>
 
                     <div class="projectContainer bgProject">
                         <img class="image" id="p1" src="./css/images/Tom Rotbart - Head Shot.png" alt="">
-                        <div class="projectText">Project 1</div>
+                        <div class="projectText">Rusty (2022) - Side Tunnel Aerofoil Manufacturing</div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div id="sandyFrontWingModal" class="modal">
+                        <!-- Modal Content -->
+                        <div class="modalContent">
+                            <span class="sandyFrontWingModalCloseButton close">&times;</span>
+                            <h2 class="sectionTitle">Sandy (2023) - Front Wing</h2>
+                            <div class="bottomLine"></div>
+                            <div class="slideshowContainer">
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Front Wing/Front Wing - CFD.png">
+                                    <div class="text">CFD simulation of the front wing in the context of the full car</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Front Wing/Front Wing - MDF Router.JPG">
+                                    <div class="text">CNC routering the mould for the second </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Front Wing/Front Wig - Oven.jpg">
+                                    <div class="text">Fitting the main element mould into the environmental chamber to cure</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Front Wing/Front Wing - Endplates.jpg">
+                                    <div class="text">Manufactured front wing endplates</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Sandy Full Car.jpg">
+                                    <div class="text">Front wing manufactured and mounted on the car</div>
+                                </div>
+
+                                <a class="previous" onclick="changeSlide(-1)"><</a>
+                                <a class="next" onclick="changeSlide(1)">></a>
+
+                            </div>
+
+                            <div class="dots" style="text-align: center;">
+                                <span class="dot" onclick="goToSlide(1)"></span>
+                                <span class="dot" onclick="goToSlide(2)"></span>
+                                <span class="dot" onclick="goToSlide(3)"></span>
+                                <span class="dot" onclick="goToSlide(4)"></span>
+                                <span class="dot" onclick="goToSlide(5)"></span>
+                            </div>
+
+                            <p>I made the 2023 front wing for Formula UBC Racing on a tight timeline of three months. I used SolidWorks to design the wing, using surfaces for all the wing elements, and solid bodies for the simpler shapes. Star-CCM+ was used to simulate its performance with the k-w SST turbulence model at a wall y+ < 5.  HMSWorks was used to toolpath the mould for the wings, and CNC-ed out of MDF. Lastly, pre-preg carbon fibre was laid up on the prepped mould surface, cured, then assembled.
+                                <br><br>Unfortunately, the member who I assigned the task to disappeared midway through the season, which left me, the aerodynamics team lead, to engineer this crucial component within the tight timeline. In 2022, the team ran a triple element front wing inboard of the tyres and ran dual elements in front of the tyres (as per rules restrictions). However, for the 2023 season, we ran the first ever monocoque chassis, which resulted in me not being able to reuse the 2022 front wing. 
+                                <br><br>The first step for me was to read internal documentation of previous front wings. I knew to manufacture a similar wing to the 2022 year would be not possible given the tight timeline, which meant I had to read about previous geometries of complete dual element front wings. 
+                                <br><br>The front wing had to meet two main objectives; to be easy to remove and install, and to be lighter than the previous year. To account for serviceability, I took advantage of the flat portion of the monocoque chassis to install the front wing with four, easy to access bolts. I then designed the internals of the wing to consist of completely carbon fibre sandwich panel stringers, lighter than the spar and aluminum ribs previously implemented. The wing has a CD of 0.15 and a CL of 0.60.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pastProjects pastProjectsCoding" style="display: none;">
+                    
+                    <div class="projectContainer bgProject">
+                        <img class="image" id="surfboardFin" src="./css/images/Projects/Surfboard Fin/Surfboard Fin - Title.png" alt="">
+                        <div class="projectText">Surfboard Fin RTM Mould (WIP)</div>
                     </div>
 
                     <div class="projectContainer bgProject">
-                        <img class="image" id="p1" src="./css/images/test1.JPG" alt="">
-                        <div class="projectText">Project 1</div>
-                    </div>
-
-                    <div class="projectContainer bgProject">
-                        <img class="image" id="p1" src="./css/images/test2.JPG" alt="">
-                        <div class="projectText">Project 1</div>
-                    </div>
-
-                    <div class="projectContainer bgProject">
-                        <img class="image" id="codingProject1" src="./css/images/Coding - Project 1 - Title.png" alt="">
+                        <img class="image" id="websitePortfolio" src="./css/images/Projects/Portfolio Website/Coding - Project 1 - Title.png" alt="">
                         <div class="projectText">Website Portfolio (WIP)</div>
                     </div>
 
@@ -135,17 +189,17 @@
                             <div class="slideshowContainer">
 
                                 <div class="slide">
-                                    <img src="./css/images/Coding - Project 1 - Modal - Pic. 1.png">
+                                    <img src="./css/images/Projects/Portfolio Website/Coding - Project 1 - Modal - Pic. 1.png">
                                     <div class="text">Testing mobile display & responsivenes</div>
                                 </div>
 
                                 <div class="slide">
-                                    <img src="./css/images/Coding - Project 1 - Modal - Pic. 2.png">
+                                    <img src="./css/images/Projects/Portfolio Website/Coding - Project 1 - Modal - Pic. 2.png">
                                     <div class="text">Initial image sizing problem</div>
                                 </div>
 
                                 <div class="slide">
-                                    <img src="./css/images/Coding - Project 1 - Modal - Pic. 3.png">
+                                    <img src="./css/images/Projects/Portfolio Website/Coding - Project 1 - Modal - Pic. 3.png">
                                     <div class="text">Working on editing this modal</div>
                                 </div>
 
@@ -168,22 +222,27 @@
                         </div>
                     </div>
 
-                    <div id="otherModal" class="modal">
+                    <div id="surfboardFinModal" class="modal">
                         <!-- Modal Content -->
                         <div class="modalContent">
-                            <span class="otherModalCloseButton close">&times;</span>
-                            <h2 class="sectionTitle">Other Modal</h2>
+                            <span class="surfboardFinCloseButton close">&times;</span>
+                            <h2 class="sectionTitle">Surfboard Fin RTM Mould</h2>
                             <div class="bottomLine"></div>
                             <div class="slideshowContainer">
 
                                 <div class="slide">
-                                    <img src="./css/images/test2.JPG">
-                                    <div class="text">Initial image sizing problem</div>
+                                    <img src="./css/images/Projects/Surfboard Fin/Surfboard Fin - Pic 1.png">
+                                    <div class="text">Problematic BPA meshed point cloud in SolidWorks</div>
                                 </div>
 
                                 <div class="slide">
-                                    <img src="./css/images/Rusty.jpg">
-                                    <div class="text">Working on editing this modal</div>
+                                    <img src="./css/images/Projects/Surfboard Fin/Surfboard Fin - Pic 2.png">
+                                    <div class="text">Pseudo OOP style code - to be turned into a class soon</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="./css/images/Projects/Surfboard Fin/Surfboard Fin - Title.png">
+                                    <div class="text">Point cloud generated by open3d with NACA 4321 configuration</div>
                                 </div>
 
                                 <a class="previous" onclick="changeSlide(-1)"><</a>
@@ -194,12 +253,13 @@
                             <div class="dots" style="text-align: center;">
                                 <span class="dot" onclick="goToSlide(1)"></span>
                                 <span class="dot" onclick="goToSlide(2)"></span>
+                                <span class="dot" onclick="goToSlide(3)"></span>
                             </div>
 
-                            <p>This website is coded in HTML, CSS, and JavaScript with a little bit of jQuery. No ChatGPT or AI was used in creating this website! Prior to making this website, I had some web dev experience, making a photo storage system using the Django framework, but I primarily worked on the backend in Python. Furthermore, this is the first time I made this website mobile responsive. 
-                                <br><br>The main challenge of this website was setting up the “My Projects” section. First, I had several issues regarding image sizing. It upset me how differently sized images looked uneven. I ended up encountering a solution to this problem after some time away on a social media app. It consisted of using aspect ratios, a maximum width, and making sure the image fit the container it was in while keeping the same aspect ratio (“object-fill: contain;”). Once I found this solution, it became a game of styling the page to my liking – this part is quite difficult itself without tools such as Figma. 
-                                <br><br>My favourite part about my website is the pop-up modal that you are reading this text from. It required a lot of research and tuning, but it turned out great! 
-                                <br><br>A key limitation I encountered is that this website needed to be static to host it on GitHub. This meant that despite having experience using the Django framework, I was not able to design a portfolio with it since it is a dynamic website. In the future I will consider this option.
+                            <p>The goal of this project is to eventually create a Resin Transfer Moulding mould of a surfboard fin with a variety of NACA aerofoil shapes to be used in the UBC Manufacturing Engineering program’s second year course MANU 230. I am working with a group of six volunteers under a professor.
+                                <br><br>The requirement for this project is to code a script in Python using Open 3D and NumPy libraries, to generate a point cloud and a mesh of the fin variably depending on the MPXX NACA airfoil type a user defines. The mesh is then to be imported into SolidWorks which can be quickly turned into a mould. Unfortunately, as a volunteer project with students who are not experienced with coding, I am forced to take on most of the work.
+                                <br><br>I used an OOP approach and coded functions that can generates a two-dimensional NACA airfoil based on equations derived from literature using cosine spacing. I then abstracted a function that generates the guiding splines written by another member and produced a point cloud of the fin. I then read up on and tested a variety of meshing algorithms and noticed the Ball Pivot Algorithm provides the best mesh so far.
+                                <br><br>Currently the mesh has some issues along the guiding splines. I suspect it has something to do with calculating normal of the initially generated point cloud. I am currently reading up on how to calculate the normal values to get a higher quality mesh.
                             </p>
                         </div>
                     </div>
@@ -241,7 +301,7 @@
 
     <footer id="mainFooter" class="bgLight">
         <div class="footerContent container">
-            <p>Version 1.17 - 27/08/23</p>
+            <p>Version 1.18 - 04/0/23</p>
 
             <div class="social">
                 <a href="https://www.linkedin.com/in/tom-rotbart-362923255/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>

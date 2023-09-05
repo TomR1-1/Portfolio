@@ -1,9 +1,10 @@
 //Project Buttons
 let aeroButton = document.getElementById("aeroButton");
 let codingButton = document.getElementById("codingButton");
-let plcButton = document.getElementById("plcButton");
+let cfdButton = document.getElementById("cfdButton");
 
 let pastProjectsAerodynamics = document.querySelector(".pastProjectsAerodynamics");
+let pastProjectsCoding = document.querySelector(".pastProjectsCoding");
 
 //If the areo button is not already active, add the active button class
 //Also remove the active class from the other buttons
@@ -14,10 +15,11 @@ aeroButton.addEventListener("click", () => {
         if(isActive(codingButton)) {
             removeActiveBtn(codingButton);
         }
-        else if (isActive(plcButton)) {
-            removeActiveBtn(plcButton);
+        else if (isActive(cfdButton)) {
+            removeActiveBtn(cfdButton);
         }
 
+        hide(pastProjectsCoding);
         showPastProject(pastProjectsAerodynamics);
     }
 });
@@ -29,17 +31,18 @@ codingButton.addEventListener("click", () => {
         if(isActive(aeroButton)) {
             removeActiveBtn(aeroButton);
         }
-        else if (isActive(plcButton)) {
-            removeActiveBtn(plcButton);
+        else if (isActive(cfdButton)) {
+            removeActiveBtn(cfdButton);
         }
 
         hide(pastProjectsAerodynamics);
+        showPastProject(pastProjectsCoding);
     }
 });
 
-plcButton.addEventListener("click", () => {
-    if (!(isActive(plcButton))) {
-        addActiveBtn(plcButton);
+cfdButton.addEventListener("click", () => {
+    if (!(isActive(cfdButton))) {
+        addActiveBtn(cfdButton);
 
         if(isActive(aeroButton)) {
             removeActiveBtn(aeroButton);
@@ -48,9 +51,8 @@ plcButton.addEventListener("click", () => {
             removeActiveBtn(codingButton);
         }
 
-        pastProjects.innerHTML = `
-        <div><img src="./css/images/Tom Rotbart - Head Shot.png" alt=""></div>
-        `;
+        hide(pastProjectsCoding);
+        hide(pastProjectsAerodynamics);
     }
 })
 
@@ -71,34 +73,51 @@ function addActiveBtn(object) {
 
 
 // MODAL JAVASCRIPT CODE
+let sandyFrontWingModal = document.getElementById("sandyFrontWingModal");
+let sandyRearWingModal = document.getElementById("sandyRearWingModal");
+
+let sandyFrontWingModalCloseButton = document.getElementsByClassName("sandyFrontWingModalCloseButton")[0];
+
+
+
 let websitePortfolioModal = document.getElementById("websitePortfolioModal");
-let otherModal = document.getElementById("otherModal");
-// let modalContent = document.querySelector(".modalContent")
+let surfboardFinModal = document.getElementById("surfboardFinModal");
+
 let websitePortfolioCloseButton = document.getElementsByClassName("websitePortfolioCloseButton")[0];
-let otherModalCloseButton = document.getElementsByClassName("otherModalCloseButton")[0];
+let surfboardFinCloseButton = document.getElementsByClassName("surfboardFinCloseButton")[0];
+
+
 // Making the modal appear and dissapear
+sandyFrontWingModalCloseButton.onclick = function() {
+    hide(sandyFrontWingModal);
+}
 
 websitePortfolioCloseButton.onclick = function() {
     hide(websitePortfolioModal);
 }
 
-otherModalCloseButton.onclick = function() {
-    hide(otherModal);
+surfboardFinCloseButton.onclick = function() {
+    hide(surfboardFinModal);
 }
 
 window.onclick = function(event) {
+    if (event.target == sandyFrontWingModal) {
+        hide(sandyFrontWingModal);
+    }    
     if (event.target == websitePortfolioModal) {
         hide(websitePortfolioModal);
     }
-    if (event.target == otherModal) {
-        hide(otherModal);
+    if (event.target == surfboardFinModal) {
+        hide(surfboardFinModal);
     }
 }
 
 // Aerodynamics Projects
-let testProject = document.getElementById("test");
-testProject.onclick = function() {
-    show(otherModal);
+let sandyFrontWing = document.getElementById("sandyFrontWing");
+let sandyRearWing = document.getElementById("sandyRearWing");
+
+sandyFrontWing.onclick = function() {
+    show(sandyFrontWingModal);
 }
 
 
@@ -107,10 +126,15 @@ testProject.onclick = function() {
 
 
 // Coding Projects
-let codingProject1 = document.getElementById("codingProject1");
+let websitePortfolio = document.getElementById("websitePortfolio");
+let surfboardFin = document.getElementById("surfboardFin");
 
-codingProject1.onclick = function() {
+websitePortfolio.onclick = function() {
     show(websitePortfolioModal);
+}
+
+surfboardFin.onclick = function() {
+    show(surfboardFinModal);
 }
 
 
