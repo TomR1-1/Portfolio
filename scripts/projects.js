@@ -76,11 +76,12 @@ function addActiveBtn(object) {
 let sandyFrontWingModal = document.getElementById("sandyFrontWingModal");
 let sandySideTunnelModal = document.getElementById("sandySideTunnelModal");
 let sandyRearWingModal = document.getElementById("sandyRearWingModal");
+let rustySTAerofoilModal = document.getElementById("rustySTAerofoilModal");
 
 let sandyFrontWingModalCloseButton = document.getElementsByClassName("sandyFrontWingModalCloseButton")[0];
 let sandySideTunnelModalCloseButton = document.getElementsByClassName("sandySideTunnelModalCloseButton")[0];
 let sandyRearWingModalCloseButton = document.getElementsByClassName("sandyRearWingModalCloseButton")[0];
-
+let rustySTAerofoilModalCloseButton = document.getElementsByClassName("rustySTAerofoilModalCloseButton")[0];
 
 
 let websitePortfolioModal = document.getElementById("websitePortfolioModal");
@@ -103,6 +104,10 @@ sandyRearWingModalCloseButton.onclick = function() {
     hide(sandyRearWingModal);
 }
 
+rustySTAerofoilModalCloseButton.onclick = function() {
+    hide(rustySTAerofoilModal)
+}
+
 
 websitePortfolioCloseButton.onclick = function() {
     hide(websitePortfolioModal);
@@ -121,7 +126,10 @@ window.onclick = function(event) {
     }
     if (event.target == sandyRearWingModal) {
         hide(sandyRearWingModal);
-    }   
+    }
+    if (event.target == rustySTAerofoilModal) {
+        hide(rustySTAerofoilModal);
+    }     
     if (event.target == websitePortfolioModal) {
         hide(websitePortfolioModal);
     }
@@ -134,6 +142,7 @@ window.onclick = function(event) {
 let sandyFrontWing = document.getElementById("sandyFrontWing");
 let sandySideTunnel = document.getElementById("sandySideTunnel");
 let sandyRearWing = document.getElementById("sandyRearWing");
+let rustySTAerofoil = document.getElementById("rustySTAerofoil")
 
 sandyFrontWing.onclick = function() {
     show(sandyFrontWingModal);
@@ -145,6 +154,10 @@ sandySideTunnel.onclick = function() {
 
 sandyRearWing.onclick = function() {
     show(sandyRearWingModal);
+}
+
+rustySTAerofoil.onclick = function() {
+    show(rustySTAerofoilModal)
 }
 
 
