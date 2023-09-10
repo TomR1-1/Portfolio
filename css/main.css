@@ -180,6 +180,29 @@ body {
     font-size: 1.5rem;
 }
 
+#aboutMe p {
+    text-align: justify;
+    padding-bottom: 0px;
+}
+
+#aboutMe .outerList {
+    list-style-type:disc;
+    margin-left: 2rem;
+}
+
+#aboutMe .outerList li {
+    padding-top: 0.5rem;
+}
+
+#aboutMe .innerList {
+    list-style-type: circle;
+    margin-left: 2rem;
+}
+
+#aboutMe .innerList li {
+    padding-top: 0px;
+}
+
 /*  SKILLS */
 #skills {
     margin: 2rem;
