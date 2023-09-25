@@ -5,6 +5,7 @@ let cfdButton = document.getElementById("cfdButton");
 
 let pastProjectsAerodynamics = document.querySelector(".pastProjectsAerodynamics");
 let pastProjectsCoding = document.querySelector(".pastProjectsCoding");
+let pastProjectsCFD = document.querySelector(".pastProjectsCFD");
 
 //If the areo button is not already active, add the active button class
 //Also remove the active class from the other buttons
@@ -20,6 +21,7 @@ aeroButton.addEventListener("click", () => {
         }
 
         hide(pastProjectsCoding);
+        hide(pastProjectsCFD);
         showPastProject(pastProjectsAerodynamics);
     }
 });
@@ -36,6 +38,7 @@ codingButton.addEventListener("click", () => {
         }
 
         hide(pastProjectsAerodynamics);
+        hide(pastProjectsCFD);
         showPastProject(pastProjectsCoding);
     }
 });
@@ -53,6 +56,7 @@ cfdButton.addEventListener("click", () => {
 
         hide(pastProjectsCoding);
         hide(pastProjectsAerodynamics);
+        show(pastProjectsCFD);
     }
 })
 
@@ -77,11 +81,14 @@ let sandyFrontWingModal = document.getElementById("sandyFrontWingModal");
 let sandySideTunnelModal = document.getElementById("sandySideTunnelModal");
 let sandyRearWingModal = document.getElementById("sandyRearWingModal");
 let rustySTAerofoilModal = document.getElementById("rustySTAerofoilModal");
+let flowVisPaintModal = document.getElementById("flowVisPaintModal");
 
 let sandyFrontWingModalCloseButton = document.getElementsByClassName("sandyFrontWingModalCloseButton")[0];
 let sandySideTunnelModalCloseButton = document.getElementsByClassName("sandySideTunnelModalCloseButton")[0];
 let sandyRearWingModalCloseButton = document.getElementsByClassName("sandyRearWingModalCloseButton")[0];
 let rustySTAerofoilModalCloseButton = document.getElementsByClassName("rustySTAerofoilModalCloseButton")[0];
+let flowVisPaintModalCloseButton = document.getElementsByClassName("flowVisPaintModalCloseButton")[0];
+
 
 
 let websitePortfolioModal = document.getElementById("websitePortfolioModal");
@@ -91,7 +98,17 @@ let websitePortfolioCloseButton = document.getElementsByClassName("websitePortfo
 let surfboardFinCloseButton = document.getElementsByClassName("surfboardFinCloseButton")[0];
 
 
+
+let cfdResearchModal = document.getElementById("cfdResearchModal");
+
+let cfdResearchModalCloseButton = document.getElementsByClassName("cfdResearchCloseButton")[0];
+
+
 // Making the modal appear and dissapear
+flowVisPaintModalCloseButton.onclick = function() {
+    hide(flowVisPaintModal);
+}
+
 sandyFrontWingModalCloseButton.onclick = function() {
     hide(sandyFrontWingModal);
 }
@@ -117,7 +134,17 @@ surfboardFinCloseButton.onclick = function() {
     hide(surfboardFinModal);
 }
 
+
+cfdResearchModalCloseButton.onclick = function() {
+    hide(cfdResearchModal);
+}
+
+
+
 window.onclick = function(event) {
+    if (event.target == flowVisPaintModal) {
+        hide(flowVisPaintModal);
+    }  
     if (event.target == sandyFrontWingModal) {
         hide(sandyFrontWingModal);
     }  
@@ -136,13 +163,21 @@ window.onclick = function(event) {
     if (event.target == surfboardFinModal) {
         hide(surfboardFinModal);
     }
+    if (event.target == cfdResearchModal) {
+        hide(cfdResearchModal);
+    }
 }
 
 // Aerodynamics Projects
+let flowVisPaint = document.getElementById("flowVisPaint");
 let sandyFrontWing = document.getElementById("sandyFrontWing");
 let sandySideTunnel = document.getElementById("sandySideTunnel");
 let sandyRearWing = document.getElementById("sandyRearWing");
-let rustySTAerofoil = document.getElementById("rustySTAerofoil")
+let rustySTAerofoil = document.getElementById("rustySTAerofoil");
+
+flowVisPaint.onclick = function() {
+    show(flowVisPaintModal);
+}
 
 sandyFrontWing.onclick = function() {
     show(sandyFrontWingModal);
@@ -157,12 +192,16 @@ sandyRearWing.onclick = function() {
 }
 
 rustySTAerofoil.onclick = function() {
-    show(rustySTAerofoilModal)
+    show(rustySTAerofoilModal);
 }
 
 
 // CFD Projects
+let cfdResearch = document.getElementById("cfdResearch");
 
+cfdResearch.onclick = function() {
+    show(cfdResearchModal);
+}
 
 
 // Coding Projects

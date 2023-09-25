@@ -173,7 +173,8 @@ body {
 #aboutMe .bioInfo .bio {
     grid-area: bio;
     border-left: 3px solid var(--primary-color);
-    padding: 0.8rem;
+    padding: 1rem;
+    margin-right: 2rem;
 }
 
 #aboutMe .bioInfo .bio h4 {

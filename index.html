@@ -62,7 +62,7 @@
                     <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-ynBlTOMdbPytDQSc1hsZB_PtUoVrsXnBjtsMfD-DNmGCwp0FrIVKnvhwv3LE0TwoyQjAPteldKt4E80V278dUTyfPsIQ=s2560"
                         alt="" class="bioImage thirdWidth">
                     <div class="bio bgLight">
-                        <h4 class="textCenter"><span>Biography</span></h4>
+                        <h4 class="textCenter"><span>What I Do?</span></h4>
                         <p>I am studying Manufacturing Engineering at the University of British Columbia planning to graduate in 2026 or 2027 depending on work experience and my time on Formula UBC Racing. I am plan to potentially take a masters in the aerodynamics field post secondary and hopefully become a CFD engineer.<br><br>
                             Formula UBC Racing is an engineering design team focused on designing, building, and racing a formula style race car based on a rule set given to us by the Society of Automotive Engineers (SAE). We manufacture almost everything about the car in house and trailer it out to Michigan every year to compete against schools from all over the world. I have been on the Aerodynamics sub-team for 3 years and I’m going into my 2nd year of being the Aerodynamics sub-team lead. I also manage the team’s finances.<br><br>
                             A few skills I have developed primarily from Formula UBC and some of my personal hobbies are:</p>
@@ -115,11 +115,16 @@
                 <div class="projectButtons">
                     <div id="aeroButton" class="btnActive">Aerodynamics</div>
                     <div id="codingButton" class="btn">Coding</div>
-                    <div id="cfdButton" class="btn">Computational Fluid Dynamics</div>
+                    <div id="cfdButton" class="btn">CFD Research</div>
                 </div>
 
                 <div class="pastProjects pastProjectsAerodynamics">
                     
+                    <div class="projectContainer bgProject">
+                        <img class="image" id="flowVisPaint" src="https://lh3.googleusercontent.com/drive-viewer/AITFw-xdxEBPLatFWQLR6lc5QG2QxwvWi2xpuAkI5-WiBoqNzkn09kmvnUok6_4wgIaOjfB2mrYE64iiZ0mQMdS9feXT56-BeA=s2560" alt="">
+                        <div class="projectText">Flow Visualization Paint Development (WIP)</div>
+                    </div>
+
                     <div class="projectContainer bgProject">
                         <img class="image" id="sandyFrontWing" src="https://lh3.googleusercontent.com/drive-viewer/AITFw-wBfxmChFUublEmFS-W3VJd5j0rErENC4Jz9ontpAPjBngH0AwH2zVDfacC7wL99s-_MjULKjW3SBZiJM2pjtasM8dwFg=s2560" alt="">
                         <div class="projectText">Sandy (2023) - Front Wing</div>
@@ -371,6 +376,54 @@
                         </div>
                     </div>
 
+                    <div id="flowVisPaintModal" class="modal">
+                        <!-- Modal Content -->
+                        <div class="modalContent">
+                            <span class="flowVisPaintModalCloseButton close">&times;</span>
+                            <h2 class="sectionTitle">Flow Visualization Paint Development (WIP)</h2>
+                            <div class="bottomLine"></div>
+                            <div class="slideshowContainer">
+
+                                <div class="slide">
+                                    <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-xxYoT2UriW80LUwS-sTfdl2vwqZNjG2MfzizcJBqch80nfagj0pAout_l9erUE1HHElAiRsi9OO_uip70rCygiLOpp=s1600">
+                                    <div class="text">Results of mineral oil & paint pigment applied with spray bottle</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-xx3gSSNhG4FxsgpNmO7kbIGC5e7N3KEaoTtlBVPXUyVV8wzhVBQAq3z59STVwWniQrLTOSTNUmNPYm3o_nYTUxUoHl=s1600">
+                                    <div class="text">Results of mineral oil & classroom chalk applied with a paint brush</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-wq0PCKQnbqB7GtSQijjhrTFk1uiqmFqThqYWtaygx8kS0WDIBUhJwOw4adOj2xJ1liecj-_A5V8G4bpt6IkxlGx4qrlg=s1600">
+                                    <div class="text">Result of paint thinner, paint pigment, & linseed oil applied with a paint brush</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-xdxEBPLatFWQLR6lc5QG2QxwvWi2xpuAkI5-WiBoqNzkn09kmvnUok6_4wgIaOjfB2mrYE64iiZ0mQMdS9feXT56-BeA=s2560">
+                                    <div class="text">Results of pervious mixture onto dual aerofoils</div>
+                                </div>
+
+                                <a class="previous" onclick="changeSlide(-1)"><</a>
+                                <a class="next" onclick="changeSlide(1)">></a>
+
+                            </div>
+
+                            <div class="dots" style="text-align: center;">
+                                <span class="dot" onclick="goToSlide(1)"></span>
+                                <span class="dot" onclick="goToSlide(2)"></span>
+                                <span class="dot" onclick="goToSlide(3)"></span>
+                                <span class="dot" onclick="goToSlide(4)"></span>
+                            </div>
+
+                            <p>
+                                Due to lack of aerodynamic validation methods available to Formula UBC, I have decided to do some research into developing a Flow-Visualization paint for our FSAE purposes. I am using a closed-circuit wind tunnel to test out different recipes consisting of either mineral oil, paint thinner, kerosene, paint pigment, classroom chalk, olive oil, and linseed oil.<br><br>
+                                The plan here is to test many varieties of paint on a flat plate first, to get a qualitative behavior that I am looking for, then I will use a dual aerofoil element to verify a CFD simulation. I am looking only for the surface flow behavior, not the force measurement since that’s what flow-visualization paint is good for.<br><br>
+                                As of writing this modal, we have not been able to come up with a good recipe. In reducing the viscosity of the paint for FSAE purposes, the “stickiness” of the paint is not good enough making it drip off the aerofoils. Research into surface energy and spending time acquiring different ingredients is in progress.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="pastProjects pastProjectsCoding" style="display: none;">
@@ -471,6 +524,72 @@
                     </div>
 
                 </div>
+
+                <div class="pastProjects pastProjectsCFD" style="display: none;">
+                    
+                    <div class="projectContainer bgProject">
+                        <img class="image" id="cfdResearch" src="https://lh3.googleusercontent.com/drive-viewer/AITFw-yjb18CO9Z2V-CLlED9XcSXsGigqIToIZzfK6HmXiiifmdweyQSe7PXFdgKWw7IcGrOTHh1aoccP6waioTzWttZ4Vcqbw=s1600" alt="">
+                        <div class="projectText">CFD Research</div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div id="cfdResearchModal" class="modal">
+                        <!-- Modal Content -->
+                        <div class="modalContent">
+                            <span class="cfdResearchCloseButton close">&times;</span>
+                            <h2 class="sectionTitle">CFD Research</h2>
+                            <div class="bottomLine"></div>
+                            <div class="slideshowContainer">
+
+                                <div class="slide">
+                                    <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-wEaTHgw_siEPmoSc7OdyZXuSiigxy7Lih5Iyw7wqhQnrFEYwmQwYqHD5WDQ_Wj4UG4WJr6u-her2Hk6SN_wE5zpRN4QQ=s1600">
+                                    <div class="text">k-epsilon model derivation</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-zPpFOM9KUVGkCv_fIhC3Q-yiOxLoEbDi_Ql2J1UY-YL2ieUU02blZ-I_aTfr_A3_cBmnYoe-Svxd3imGQMAkMzuWjZ=s1600">
+                                    <div class="text">k-omega & k-omega SST model derivations</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="https://lh3.googleusercontent.com/drive-viewer/AITFw-zw7XJ7e0niI7wkj0yLFq1Gy1fjAjbk4YumLZ8FL459bOH8KuP-mF7h4-bAV0R5OdrTFZYmT4OMECZ_s9Oym5ivD0pWcg=s1600">
+                                    <div class="text">Spalart Allmaras model derivation</div>
+                                </div>
+
+                                <a class="previous" onclick="changeSlide(-1)"><</a>
+                                <a class="next" onclick="changeSlide(1)">></a>
+
+                            </div>
+
+                            <div class="dots" style="text-align: center;">
+                                <span class="dot" onclick="goToSlide(1)"></span>
+                                <span class="dot" onclick="goToSlide(2)"></span>
+                                <span class="dot" onclick="goToSlide(3)"></span>
+                            </div>
+
+                            <p>
+                                I really like CFD. I like understanding what exactly the computer is doing when simulating. I have watched several derivations of a variety of topics specifically focussing on the eddy viscosity models, but a few other equations as well. A few equations that I have derived are:<br></p>
+                                <ul style="justify-content: left;">
+                                    <li>Navier Stokes Equation</li>
+                                    <li>Reynolds Averaged Navier Stokes Equation</li>
+                                    <li>Eddy Viscosity Model</li>
+                                    <li>k-epsilon model</li>
+                                    <li>k-omega model</li>
+                                    <li>k-omega SST model</li>
+                                    <li>Spalart Allmaras model</li>
+                                    <li>Large Eddy Simulation</li>
+                                    <li>Smagorinsky model</li>
+                                    <li>Wall Functions</li>
+                                    <li>Prism Layers</li>
+                                    <li>Courant Number</li>
+                                </ul><br>
+                            <p>
+                                The next topic I will be learning is what do residuals come from and what do they mean. I have learned these derivations from Dr. Aidan Wimshurst's youtube channel <a href="https://www.youtube.com/@fluidmechanics101" target="_blank">Fluid Mechanics 101</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </section>
@@ -507,7 +626,7 @@
 
     <footer id="mainFooter" class="bgLight">
         <div class="footerContent container">
-            <p>Version 1.22 - 10/09/23</p>
+            <p>Version 1.23 - 24/09/23</p>
 
             <div class="social">
                 <a href="https://www.linkedin.com/in/tom-rotbart-362923255/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
