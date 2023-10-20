@@ -94,7 +94,7 @@ body {
 
 /* HEADER */
 .hero {
-    background: url("https://lh3.googleusercontent.com/drive-viewer/AITFw-wmMfg4QdfT8d44fE_gM3Xg45TMqos3jk0AZ26aPxm3xd7MFToms1sjLtHBCU2IjErDAP3GugzeT5vRTYwx7UPYvoBJFQ=s1600");
+    background: url("https://drive.google.com/uc?id=1-G7E4WQD9wD58GkyEB1d85HvQTLGFcRO");
     background-repeat: no-repeat;
     background-size: 100vw 120vh;
     object-fit: fill;
@@ -152,6 +152,7 @@ body {
     display: grid;
     grid-template-areas: "bioimage bio bio";
     grid-gap: 1.2rem;
+    align-items: center;
 }
 
 #aboutMe .bioInfo .bio p {
