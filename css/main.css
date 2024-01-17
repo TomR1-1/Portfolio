@@ -94,7 +94,7 @@ body {
 
 /* HEADER */
 .hero {
-    background: url(/Portfolio\ Images/Sandy.JPG);
+    /* background-image: url("/Portfolio\ Images/Sandy.JPG"); */
     background-repeat: no-repeat;
     background-size: 100vw 120vh;
     object-fit: fill;
