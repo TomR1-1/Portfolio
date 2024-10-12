@@ -3,8 +3,8 @@ html {
 }
 
 :root {
-  --primary-color: #137ff2;
-  --secondary-color: #ff6303;
+  --primary-color: #b842bc;
+  --secondary-color: #F2B84C;
 }
 
 * {
@@ -54,13 +54,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between !important;
-    /*background-color: transparent;*/
+    background: linear-gradient(to bottom, #333333 25%, #33333300);
+    /*background-color: transparent;*/ 
     width: 100%;
     height: 70px;
     position: fixed;
     top: 0;
     padding: 0 25px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
   
 .navbar .logo {
@@ -98,7 +99,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100vw 120vh;
     object-fit: fill;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.15);
     background-blend-mode: multiply;
     background-position-y: -40vh;
     height: 75vh;
