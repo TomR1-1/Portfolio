@@ -3,8 +3,8 @@ html {
 }
 
 :root {
-  --primary-color: #b842bc;
-  --secondary-color: #F2B84C;
+  --new-primary-color: #e153e6;
+  --new-secondary-color: #F2B84C;
 }
 
 * {
@@ -34,7 +34,7 @@ p {
 }
 
 span {
-    color: var(--primary-color);
+    color: var(--new-primary-color);
 }
 
 img {
@@ -81,7 +81,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    border-bottom: 2px var(--secondary-color) solid;
+    border-bottom: 2px var(--new-secondary-color) solid;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -133,16 +133,16 @@ body {
     margin: 20px 0 30px;
 }
 
-.hero::before {
+/* .hero::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.3;
+    opacity: 0.1;
     background-color: #000;
-}
+} */
 
 /* ABOUT ME */
 #aboutMe {
@@ -174,7 +174,7 @@ body {
 
 #aboutMe .bioInfo .bio {
     grid-area: bio;
-    border-left: 3px solid var(--primary-color);
+    border-left: 3px solid var(--new-primary-color);
     padding: 1rem;
     margin-right: 2rem;
 }
@@ -247,7 +247,7 @@ body {
 #contact .contact .email .fa,
 #contact .contact .phone .fa,
 #contact .contact .linkedIn .fa {
-    color: var(--primary-color);
+    color: var(--new-primary-color);
     margin: 1rem;
 }
 
@@ -257,7 +257,7 @@ body {
 }
 
 #contact .contact .linkedIn a:hover {
-    color: var(--secondary-color);
+    color: var(--new-secondary-color);
 }
 
 /* FOOTER */
@@ -279,7 +279,7 @@ body {
 }
   
 #mainFooter .footerContent .social i:hover {
-    background: var(--secondary-color);
+    background: var(--new-secondary-color);
 }
 
 /* ONLOAD ANIMATION */
@@ -293,8 +293,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-      --primary-color: #137ff2;
-      --secondary-color: #ff6303;
+    --new-primary-color: #b842bc;
+    --new-secondary-color: #F2B84C;
 }
   
 .slider {
@@ -337,6 +337,6 @@ body {
 }
     
 ::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: var(--new-primary-color);
     border-radius: 3rem;
 }
